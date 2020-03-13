@@ -1,0 +1,11 @@
+<div>
+  <ul >
+    <li *ngFor="let state of states">
+      <a routerLink="/detail/{{state.id}}">
+        <span class="badge">{{state.id}}</span> {{state.name}}
+      </a>
+      <div><button class="delete" title="delete state"
+        (click)="delete(state)">x</button></div>
+    </li>
+  </ul>
+</div>

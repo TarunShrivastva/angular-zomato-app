@@ -1,0 +1,23 @@
+[
+    {
+      "id": "1",
+      "name": "Delhi",
+      "created_at": "Wed Sep 20 2019 17:22:41 GMT+0700",
+      "updated_at": "Wed Sep 20 2019 17:22:41 GMT+0700",
+      "deleted_at": "Wed Sep 20 2019 17:22:41 GMT+0700"
+    },
+    {
+      "id": "2",
+      "name": "Bihar",
+      "created_at": "Wed Sep 20 2019 17:22:41 GMT+0700",
+      "updated_at": "Wed Sep 20 2019 17:22:41 GMT+0700",
+      "deleted_at": "Wed Sep 20 2019 17:22:41 GMT+0700"
+    },
+    {
+      "id": "3",
+      "name": "Madhya Pradesh",
+      "created_at": "Wed Sep 20 2019 17:22:41 GMT+0700",
+      "updated_at": "Wed Sep 20 2019 17:22:41 GMT+0700",
+      "deleted_at": "Wed Sep 20 2019 17:22:41 GMT+0700"
+    }
+  ]
