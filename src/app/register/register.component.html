@@ -1,0 +1,34 @@
+<div class="col-md-12">
+  <h4 class="mb-3">Register</h4>
+  <p class="alert alert-danger" *ngIf="password.value != c_password.value">
+    Password Does not Match
+  </p>
+  <form class="needs-validation" (ngSubmit)="onFormSubmit(regForm)" #regForm="ngForm">
+    <div class="row">
+      
+      <div class="col-md-12">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" #name ngModel class="form-control" id="name" value="" autocomplete="false" required>
+      </div>
+
+      <div class="col-md-12">
+        <label for="email">Email </label>
+        <input type="email" name="email" #email ngModel class="form-control" id="email" value="" placeholder="email" autocomplete="false" required>
+      </div>
+
+      <div class="col-md-12">
+        <label for="password">Password </label>
+        <input type="password" name="password" #password ngModel class="form-control" id="password" autocomplete="false" required>
+      </div>
+
+      <div class="col-md-12">
+        <label for="c_password">ReType Password </label>
+        <input type="password" name="c_password" #c_password ngModel class="form-control" id="c_password" autocomplete="false" required>
+      </div>
+
+    </div>
+
+    <hr class="mb-4">
+    <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="regForm.invalid || password.value != c_password.value">Continue to checkout</button>
+  </form>
+</div>

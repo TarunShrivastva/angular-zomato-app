@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { State } from './state-interface/state';
+import { Configuration } from '../configuration';
 
 @Injectable({ providedIn: 'root' })
 
@@ -12,12 +13,22 @@ export class StateService {
 
   private stateUrl = 'assets/data/state.json';  // URL to web api
 
+  config = new Configuration();
+
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
   constructor(
-    private http: HttpClient) { }
+    private http: HttpClient) { 
+
+  }
+
+  // loginUser(user:any){
+  //   this.http
+  //   .post(this.config.apiUrl + '/login', user)
+  //   .subscribe(x =>console.log(x));
+  // }  
 
   /** GET states from the server */
   getStates (): Observable<State[]> {
