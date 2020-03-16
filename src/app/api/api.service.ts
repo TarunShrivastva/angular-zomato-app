@@ -17,8 +17,22 @@ export class ApiService {
 
   registerUser(user: any) {
     this.http
-    .post(this.config.apiUrl + '/register', user)
-    .subscribe(x =>console.log(x));
+    .post(this.config.apiUrl + '/register', user, this.httpOptions)
+    .subscribe((response:any) => {
+      const token = (response.success.token) !== null && (typeof (response.success.token) != 'undefined')? true:false;
+      sessionStorage.setItem('x-auth', `$token`);
+      return token;
+    });
   }
  
+  loginUser(user: any) {
+    this.http
+    .post(this.config.apiUrl + '/login', user, this.httpOptions)
+    .subscribe((response:any) => {
+      const token = (response.success.token) !== null && (typeof (response.success.token) != 'undefined')? true:false;
+      sessionStorage.setItem('x-auth', `$token`);
+      return token;
+    });      
+  }
+
 }

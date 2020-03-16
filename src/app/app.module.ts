@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { NevbarComponent } from './nevbar/nevbar.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SkillsComponent } from './skills/skills.component';
     NevbarComponent,
     HomeComponent,
     SkillsComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,
