@@ -20,7 +20,7 @@ export class ApiService {
     .post(this.config.apiUrl + '/register', user, this.httpOptions)
     .subscribe((response:any) => {
       const token = (response.success.token) !== null && (typeof (response.success.token) != 'undefined')? true:false;
-      sessionStorage.setItem('x-auth', `$token`);
+      localStorage.setItem('x-auth', response.success.token);
       return token;
     });
   }
@@ -30,7 +30,7 @@ export class ApiService {
     .post(this.config.apiUrl + '/login', user, this.httpOptions)
     .subscribe((response:any) => {
       const token = (response.success.token) !== null && (typeof (response.success.token) != 'undefined')? true:false;
-      sessionStorage.setItem('x-auth', `$token`);
+      localStorage.setItem('x-auth', response.success.token);
       return token;
     });      
   }

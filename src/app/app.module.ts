@@ -14,6 +14,12 @@ import { NevbarComponent } from './nevbar/nevbar.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { TabbarComponent } from './tabbar/tabbar.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { BookmarkedComponent } from './bookmarked/bookmarked.component';
+import { CollectionComponent } from './collection/collection.component';
+import { GalleryThumbnailComponent } from './gallery/gallery-thumbnail/gallery-thumbnail.component';
+import { CategoryTypeComponent } from './category-type/category-type.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +32,12 @@ import { RegistrationComponent } from './registration/registration.component';
     HomeComponent,
     SkillsComponent,
     RegistrationComponent,
+    TabbarComponent,
+    GalleryComponent,
+    BookmarkedComponent,
+    CollectionComponent,
+    GalleryThumbnailComponent,
+    CategoryTypeComponent,
   ],
   imports: [
     BrowserModule,
