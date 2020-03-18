@@ -4,42 +4,35 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
-import { Gallery } from './gallery.model';
+import { CategoryType } from './category-type.model';
 import { Configuration } from '../configuration';
+import { ActivatedRoute } from '@angular/router';
 
-@Injectable({ providedIn: 'root' })
-
-export class GalleryService {
-
+@Injectable({
+  providedIn: 'root'
+})
+export class CategoryTypeService {
   config = new Configuration;
+
   
   httpOptions = {
     headers: new HttpHeaders({'Authorization': 'Bearer ' + localStorage.getItem('x-auth') , 'Content-Type': 'application/json' })
   };
   
   constructor(
-    private http: HttpClient) { 
-
+    private http: HttpClient, private route: ActivatedRoute) {
   }
 
   
   /** GET Categories from the server */
-  getCategories(): Observable<Gallery[]> {
-    return this.http.get<Gallery[]>(this.config.apiUrl + '/get_categories', this.httpOptions)
+  getRestaurentsByCategoryName(name:string): Observable<CategoryType[]> {
+    return this.http.get<CategoryType[]>(this.config.apiUrl + '/get_restaurent_by_category_name?name='+ name, this.httpOptions)
       .pipe(
         tap(_ => this.log('fetched categories')),
-        catchError(this.handleError<Gallery[]>('getCategories', []))
+        catchError(this.handleError<CategoryType[]>('getCategories', []))
       );
   }
 
-  /** GET Category by id. Will 404 if id not found */
-  getCategoryById(id: number): Observable<Gallery> {
-    return this.http.get<Gallery>(this.config.apiUrl + '/get_categories_by_id/?id=' + id, this.httpOptions).pipe(
-      tap(_ => this.log(`fetched Category By id=${id}`)),
-      catchError(this.handleError<Gallery>(`getCategory id=${id}`))
-    );
-  }
-  
   /**
    * Handle Http operation that failed.
    * Let the app continue.
@@ -63,6 +56,6 @@ export class GalleryService {
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
     console.log(message);
-  }
+  }  
 
 }

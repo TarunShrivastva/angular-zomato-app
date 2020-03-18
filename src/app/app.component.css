@@ -56,6 +56,14 @@
     background: #ccc;
   }
   
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+
   @media screen and (max-width: 600px) {
     .topnav .search-container {
       float: none;

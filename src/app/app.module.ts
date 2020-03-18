@@ -20,6 +20,10 @@ import { BookmarkedComponent } from './bookmarked/bookmarked.component';
 import { CollectionComponent } from './collection/collection.component';
 import { GalleryThumbnailComponent } from './gallery/gallery-thumbnail/gallery-thumbnail.component';
 import { CategoryTypeComponent } from './category-type/category-type.component';
+import { ReviewComponent } from './review/review.component';
+import { SideSectionComponent } from './side-section/side-section.component';
+import { InfoComponent } from './info/info.component';
+import { FoodComponent } from './food/food.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,10 @@ import { CategoryTypeComponent } from './category-type/category-type.component';
     CollectionComponent,
     GalleryThumbnailComponent,
     CategoryTypeComponent,
+    ReviewComponent,
+    SideSectionComponent,
+    InfoComponent,
+    FoodComponent,
   ],
   imports: [
     BrowserModule,

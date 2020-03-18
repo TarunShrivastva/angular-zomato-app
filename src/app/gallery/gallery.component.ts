@@ -21,8 +21,7 @@ export class GalleryComponent implements OnInit {
   getCategories(): void {
     this.galleryService.getCategories()
     .subscribe((categories:any) => {
-      this.categories.push(categories); 
-      console.log(categories, this.categories);
+      this.categories = categories;
     });
   }
 

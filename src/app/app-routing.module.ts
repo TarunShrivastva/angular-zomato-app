@@ -9,6 +9,9 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CollectionComponent } from './collection/collection.component';
 import { BookmarkedComponent } from './bookmarked/bookmarked.component';
 import { CategoryTypeComponent } from './category-type/category-type.component';
+import { GalleryThumbnailComponent } from './gallery/gallery-thumbnail/gallery-thumbnail.component';
+import { InfoComponent } from './info/info.component';
+import { FoodComponent } from './food/food.component';
 
 const routes: Routes = [
   { 
@@ -34,11 +37,34 @@ const routes: Routes = [
       },
     ]  
   },
-  { path:'ncr/:type' ,component: CategoryTypeComponent },
+  
+  { path:'ncr/:categoryname', component: CategoryTypeComponent },
+  
+  { 
+    path:'ncr/:alias/:id', 
+    component: GalleryThumbnailComponent,
+    children: [
+      {
+        path: 'info',
+        component: InfoComponent,
+      },
+      {
+        path: 'order',
+        component: FoodComponent,
+      },
+      { 
+        path: '', 
+        redirectTo:'info', 
+        pathMatch: 'full'
+      },
+    ]
+  },
+
+
+
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegistrationComponent },
   { path: '', redirectTo:'/', pathMatch: 'full'},
-  
   
   // { path: 'skills', component: SkillsComponent, canActivate: [ AuthGuard ] },
   // { path: '**', component: PageNotFoundComponent }
