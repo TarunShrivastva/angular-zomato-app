@@ -9,4 +9,22 @@ export interface GalleryThumbnail {
     created_at: Date
     updated_at: Date
     deleted_at: Date
+    foods: Food[]
+}
+
+export interface Food {   
+    [index: number]: FoodData[]        
+}
+
+export interface FoodData {
+        id: number
+        name: string
+        image: string
+        price: number
+        category_id: number
+        subcategory_id: number
+        restaurent_id: number
+        created_at: Date
+        updated_at: Date
+        deleted_at: Date 
 }

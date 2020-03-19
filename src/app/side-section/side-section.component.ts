@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SharedService } from '../shared/shared.service'
+import { GalleryThumbnail } from '../gallery/gallery-thumbnail/gallery-thumbnail.model';
 
 @Component({
   selector: 'app-side-section',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedService: SharedService ) { }
 
-  ngOnInit() {
+  counts: number = 1;
+  
+  get items() {
+    return this.sharedService.items;
+  }
+
+  ngOnInit() { }
+
+  delete(foodId: number): void {
+    console.log(foodId);
+  }
+
+  onIncrement(): void {
+    this.counts += 1;
+  }
+   
+  onDecrement(): void {
+    this.counts -= 1;
   }
 
 }

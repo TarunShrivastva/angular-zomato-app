@@ -1,17 +1,17 @@
 <div class="card">
   <div class="container">
       <h5>Category Name</h5>
-      <div class="card" style="margin-bottom: 10px;">
+      <div class="card" style="margin-bottom: 10px;" *ngFor="let food of foods">
         <div class="container">
            <div class="row">
              <div class="col-md-6">
               <div class="fakeimg" style="height:50px; padding:25px;">
-                Food Name
+                {{ food.name }}
               </div>
              </div>
              <div class="col-md-6">
               <div class="fakeimg" style="height:50px;">
-                <button class="alert alert-success" (click)= "addItem()" style="float: right; margin-top: 25px;"> Add </button>
+                <button class="alert alert-success" (click)= "addItem(food)" style="float: right; margin-top: 25px;"> Add </button>
               </div>    
              </div>
            </div> 

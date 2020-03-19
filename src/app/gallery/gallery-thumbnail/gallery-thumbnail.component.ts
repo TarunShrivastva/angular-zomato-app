@@ -7,7 +7,7 @@ import { GalleryThumbnailService } from './gallery-thumbnail.service';
 @Component({
   selector: 'app-gallery-thumbnail',
   templateUrl: './gallery-thumbnail.component.html',
-  styleUrls: ['./gallery-thumbnail.component.css']
+  styleUrls: ['./gallery-thumbnail.component.css'],
 })
 export class GalleryThumbnailComponent implements OnInit {
 
@@ -23,7 +23,6 @@ export class GalleryThumbnailComponent implements OnInit {
     this.galleryThumbnailService.getRestaurentById(this.route.snapshot.params.id)
     .subscribe((restaurents:any) => {
       this.restaurents = restaurents;
-      console.log(this.restaurents);
     });
   }
 
