@@ -1,0 +1,15 @@
+<h2>Collections - Delhi NCR</h2>
+<p>Create and browse lists of the finest restaurants</p>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px"></h1>
+    <p></p>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="column" *ngFor="let categoryType of categoryTypes">
+    <img [routerLink]= "['/ncr', categoryType.title, categoryType.id]" src="http://localhost:8000/upload/{{ categoryType.image }}" style="width:100%">  
+  </div>
+</div>

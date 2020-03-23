@@ -1,0 +1,13 @@
+<h2>Collections - Delhi NCR</h2>
+<p>Create and browse lists of the finest restaurants</p>
+
+<div class="tab">
+  <button  [routerLink] ="['/featured']" routerLinkActive ="active" [routerLinkActiveOptions] ="{exact:true}"
+  class="tablinks">Handpicked</button>
+  <button [routerLink] ="['/bookmarked']" routerLinkActive ="active" [routerLinkActiveOptions] ="{exact:true}"
+  class="tablinks">Saved Collections</button>
+  <button [routerLink] ="['/me']" routerLinkActive ="active" [routerLinkActiveOptions] ="{exact:true}"
+  class="tablinks">My Collections</button>
+</div>
+<router-outlet></router-outlet>
+<!-- <app-gallery></app-gallery> -->

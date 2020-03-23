@@ -1,0 +1,24 @@
+  <div class="card">
+    <h2>About Me</h2>
+    <div class="fakeimg" style="height:100px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+  </div>
+  <div class="card" *ngIf="items?.length > 0" >
+    <h3>Order Added</h3>
+    <div *ngFor="let item of (items | itemManage ) ">
+      <div class="fakeimg">{{ item.name }}</div>
+      <div>
+        {{ counts }} : 
+        <button class=" alert alert-success" title=""
+        (click)="onIncrement()">+</button>
+        <button class=" alert alert-danger" title=""
+        (click)="onDecrement()">-</button>
+      </div>
+      <br>
+      <br>
+    </div>
+  </div>
+  <!-- <div class="card">
+    <h3>Follow Me</h3>
+    <p>Some text..</p>
+  </div> -->
