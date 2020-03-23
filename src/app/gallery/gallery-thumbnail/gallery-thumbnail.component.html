@@ -3,8 +3,8 @@
     <div class="card">
       <h2>{{ restaurents.name }}</h2>
       <h5 ng-app="myApp" ng-controller="datCtrl">{{  restaurents.street }}, {{  restaurents.created_at | date : "dd-MM-y" }}</h5>
-      <div class="fakeimg" style="height:100%;">
-        <img src="http://localhost:8000/upload/{{ restaurents.image }}" style="width:100%"> 
+      <div appBorderRadius class="fakeimg" style="height:100%;">
+        <img appBorderRadius src="http://localhost:8000/upload/{{ restaurents.image }}" style="width:100%"> 
       </div>
       <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>

@@ -24,6 +24,9 @@ import { ReviewComponent } from './review/review.component';
 import { SideSectionComponent } from './side-section/side-section.component';
 import { InfoComponent } from './info/info.component';
 import { FoodComponent } from './food/food.component';
+import { BorderRadiusDirective } from './gallery/gallery-thumbnail/border-radius.directive';
+import { ItemManagePipe } from './side-section/item-manage.pipe';
+import { FoodFilterComponent } from './food-filter/food-filter.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { FoodComponent } from './food/food.component';
     SideSectionComponent,
     InfoComponent,
     FoodComponent,
+    BorderRadiusDirective,
+    ItemManagePipe,
+    FoodFilterComponent,
   ],
   imports: [
     BrowserModule,
